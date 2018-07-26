@@ -25677,3 +25677,14 @@ ion-navbar.toolbar {
   min-height: calc(46px + constant(safe-area-inset-bottom));
   min-height: calc(46px + env(safe-area-inset-bottom));
 }
+
+.cheryl {
+  color: red;
+}
+
+#myInput {
+  border-style: groove;
+  border-width: 2px;
+  border-radius: 8px;
+  padding: 0px 5px;
+}
