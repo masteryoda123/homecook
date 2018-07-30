@@ -1,14 +1,15 @@
 page-home {
+  .thumbnail {
+    border-radius: 12%;
+  }
 
+  .textbox {
+    border-style: groove;
+    border-width: 2px;
+    border-radius: 8px;
+    padding: 0px 5px;
+  }
 }
 
-.thumbnail {
-  border-radius: 12%;
-}
 
-#myInput {
-  border-style: groove;
-  border-width: 2px;
-  border-radius: 8px;
-  padding: 0px 5px;
-}
+
