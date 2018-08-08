@@ -8,57 +8,23 @@
 </ion-header>
 
 <ion-content padding>
-  <ion-input class="textbox" placeholder="What should I eat...">
-    <ion-icon class="icon"ios="ios-search" md="md-search" item-right></ion-icon>
-  </ion-input>
+  <ion-searchbar
+    animated="true"
+    placeholder="What should I eat..."
+    [(ngModel)]="myInput"
+    [showCancelButton]="shouldShowCancel">
+    <!--
+    (ionInput)="onInput($event)"
+    (ionCancel)="onCancel($event)">
+    -->
+  </ion-searchbar>
   <ion-list>
-    <ion-item>
+    <ion-item *ngFor="let recipe of recipes" (click)="recipeSelect(recipe)">
       <ion-thumbnail item-start>
         <img class="thumbnail" src="assets/imgs/afung.jpg">
       </ion-thumbnail>
-      <h2>Afung</h2>
-      <p>Cheryl's favorite food since 1998</p>
-      <button ion-button clear item-end>View</button>
-    </ion-item>
-    <ion-item>
-      <ion-thumbnail item-start>
-        <img class="thumbnail" src="assets/imgs/afung.jpg">
-      </ion-thumbnail>
-      <h2>Afung</h2>
-      <p>Cheryl's favorite food since 1998</p>
-      <button ion-button clear item-end>View</button>
-    </ion-item>
-    <ion-item>
-      <ion-thumbnail item-start>
-        <img class="thumbnail" src="assets/imgs/afung.jpg">
-      </ion-thumbnail>
-      <h2>Afung</h2>
-      <p>Cheryl's favorite food since 1998</p>
-      <button ion-button clear item-end>View</button>
-    </ion-item>
-    <ion-item>
-      <ion-thumbnail item-start>
-        <img class="thumbnail" src="assets/imgs/afung.jpg">
-      </ion-thumbnail>
-      <h2>Afung</h2>
-      <p>Cheryl's favorite food since 1998</p>
-      <button ion-button clear item-end>View</button>
-    </ion-item>
-    <ion-item>
-      <ion-thumbnail item-start>
-        <img class="thumbnail" src="assets/imgs/afung.jpg">
-      </ion-thumbnail>
-      <h2>Afung</h2>
-      <p>Cheryl's favorite food since 1998</p>
-      <button ion-button clear item-end>View</button>
-    </ion-item>
-    <ion-item>
-      <ion-thumbnail item-start>
-        <img class="thumbnail" src="assets/imgs/afung.jpg">
-      </ion-thumbnail>
-      <h2>Afung</h2>
-      <p>Cheryl's favorite food since 1998</p>
-      <button ion-button clear item-end>View</button>
+      <h2>{{ recipe.name }}</h2>
+      <button ion-button clear item-end>Add to mealplan</button>
     </ion-item>
   </ion-list>
 </ion-content>
