@@ -63,3 +63,8 @@ typings/
 # ionic
 www
 .sourcemaps
+platforms
+plugins
+
+# idea
+.idea
