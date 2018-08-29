@@ -23,7 +23,7 @@ export class InventoryPage {
   // TODO
   fetchInventories() {
     let inventories = [];
-    for (let i = 0; i < 6; i++) {
+    for (let i = 0; i < 15; i++) {
       inventories.push({
         id: i,
         name: "Inventory-" + i,
